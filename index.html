@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Games Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold text-blue-600">GameZone</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#games" class="hover:text-blue-600">Games</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="md:hidden bg-white hidden">
+      <a href="#home" class="block px-6 py-2 hover:bg-gray-100">Home</a>
+      <a href="#games" class="block px-6 py-2 hover:bg-gray-100">Games</a>
+      <a href="#about" class="block px-6 py-2 hover:bg-gray-100">About</a>
+      <a href="#contact" class="block px-6 py-2 hover:bg-gray-100">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-20 bg-cover bg-center h-screen" style="background-image:url('https://source.unsplash.com/1600x900/?video-games,arcade');">
+    <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+      <div class="text-center text-white px-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to GameZone</h1>
+        <p class="text-lg md:text-2xl mb-6">Play the best free online games anywhere, anytime.</p>
+        <a href="#games"
+           class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Explore Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games Showcase -->
+  <section id="games" class="container mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Featured Games</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Game Card -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://source.unsplash.com/600x400/?puzzle-game" alt="Puzzle Game" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Mystery Puzzle</h3>
+          <p class="text-gray-600 mb-4">Solve intriguing puzzles in our top-rated mystery adventure.</p>
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Play Now</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://source.unsplash.com/600x400/?arcade-game" alt="Arcade Game" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Space Shooter</h3>
+          <p class="text-gray-600 mb-4">Take down alien invaders in this fast-paced arcade shooter.</p>
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Play Now</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://source.unsplash.com/600x400/?racing-game" alt="Racing Game" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Turbo Racers</h3>
+          <p class="text-gray-600 mb-4">Compete in high-speed races and climb to the top of the leaderboard.</p>
+          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Play Now</a>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">About GameZone</h2>
+      <p class="max-w-3xl mx-auto text-center text-gray-700">
+        GameZone is your ultimate destination for free online gaming. We curate the latest and greatest in-browser games
+        across genres — from puzzles and strategy to action and racing. No downloads, no fees, just instant fun.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-8">Get In Touch</h2>
+    <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <div class="mb-4">
+        <label class="block mb-2 font-semibold" for="name">Name</label>
+        <input id="name" type="text" required
+               class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2 font-semibold" for="email">Email</label>
+        <input id="email" type="email" required
+               class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2 font-semibold" for="message">Message</label>
+        <textarea id="message" rows="4" required
+                  class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <button type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 GameZone. All rights reserved.</p>
+      <div class="mt-4 space-x-4">
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const menu  = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
