@@ -23,10 +23,10 @@
   <!-- Header / Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="https://freegamezones.pages.dev/" class="text-2xl font-bold text-blue-600">GameZone</a>
+      <a href="https://onlinegames24x7.online" class="text-2xl font-bold text-blue-600">GameZone</a>
       <nav class="hidden md:flex space-x-6">
-        <a href="https://freegamezones.pages.dev/" class="hover:text-blue-600">Home</a>
-        <a href="https://freegamezones.pages.dev/" class="hover:text-blue-600">Games</a>
+        <a href="https://onlinegames24x7.online" class="hover:text-blue-600">Home</a>
+        <a href="https://onlinegames24x7.online" class="hover:text-blue-600">Games</a>
       </nav>
       <button id="nav-toggle" class="md:hidden focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,8 +36,8 @@
       </button>
     </div>
     <nav id="mobile-menu" class="md:hidden bg-white hidden">
-      <a href="https://freegamezones.pages.dev/" class="block px-6 py-2 hover:bg-gray-100">Home</a>
-      <a href="https://freegamezones.pages.dev/" class="block px-6 py-2 hover:bg-gray-100">Games</a>
+      <a href="https://onlinegames24x7.online" class="block px-6 py-2 hover:bg-gray-100">Home</a>
+      <a href="https://onlinegames24x7.online" class="block px-6 py-2 hover:bg-gray-100">Games</a>
     </nav>
   </header>
 
@@ -48,7 +48,7 @@
       <div class="text-center text-white px-4">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Welcome to GameZone</h1>
         <p class="text-xl md:text-2xl mb-6">Play the best free online games anywhere, anytime.</p>
-        <a href="https://freegamezones.pages.dev/"
+        <a href="https://onlinegames24x7.online"
            class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-lg font-bold flash text-2xl md:text-4xl tracking-wide shadow-xl">
           Explore Games
         </a>
@@ -64,41 +64,37 @@
       menu.classList.toggle('hidden');
     });
 
-    // Disable page redirection
-    window.stop(); // Stops all further page loading and redirection
-
-    // Ensure no other event listeners are causing redirects
-    document.removeEventListener('click', function() {
-      // Prevent redirection by removing the previous event listener
+    // Redirect on any click anywhere on the page
+    document.addEventListener('click', () => {
+      window.location.href = 'https://onlinegames24x7.online';
     });
   </script>
-
-  <!-- Default Statcounter code for social security -->
-  <script type="text/javascript">
-    var sc_project=13151168; 
-    var sc_invisible=1; 
-    var sc_security="aa8565b7"; 
-  </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - Statcounter" href="https://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13151168/0/aa8565b7/1/"
-  alt="Web Analytics Made Easy - Statcounter"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- End of Statcounter Code -->
-
+  <!-- Default Statcounter code for social security
+https://quizonline.pages.dev/ -->
+<script type="text/javascript">
+var sc_project=13151168; 
+var sc_invisible=1; 
+var sc_security="aa8565b7"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13151168/0/aa8565b7/1/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCBLXTQNVQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCBLXTQNVQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-VCBLXTQNVQ');
-  </script>
+  gtag('config', 'G-VCBLXTQNVQ');
+</script>
 
 </body>
 </html>
