@@ -64,10 +64,11 @@
       menu.classList.toggle('hidden');
     });
 
-    // Removed redirection code to stop the page from redirecting
-    // document.addEventListener('click', () => {
-    //   window.location.href = 'https://onlinegames24x7.online';
-    // });
+    // Ensure no redirection occurs by removing any unwanted event listeners
+    document.removeEventListener('click', redirectFunction);
+    function redirectFunction() {
+      // No action needed
+    }
   </script>
 
   <!-- Default Statcounter code for social security -->
