@@ -1,100 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Online Games Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone - Your Gaming Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes flash {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%      { opacity: 0.4; transform: scale(1.1); }
-    }
-    .flash {
-      animation: flash 1s infinite;
-    }
-    body {
-      cursor: pointer;
-    }
-  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-  <!-- Header / Navbar -->
-  <header class="bg-white shadow-md fixed w-full z-10">
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="https://onlinegames24x7.online" class="text-2xl font-bold text-blue-600">GameZone</a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="https://onlinegames24x7.online" class="hover:text-blue-600">Home</a>
-        <a href="https://onlinegames24x7.online" class="hover:text-blue-600">Games</a>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-blue-800 py-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-3xl font-bold">GameZone</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+          <li><a href="#games" class="hover:text-blue-300">Games</a></li>
+          <li><a href="#about" class="hover:text-blue-300">About</a></li>
+          <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+        </ul>
       </nav>
-      <button id="nav-toggle" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
     </div>
-    <nav id="mobile-menu" class="md:hidden bg-white hidden">
-      <a href="https://onlinegames24x7.online" class="block px-6 py-2 hover:bg-gray-100">Home</a>
-      <a href="https://onlinegames24x7.online" class="block px-6 py-2 hover:bg-gray-100">Games</a>
-    </nav>
   </header>
 
-  <!-- Hero Section with gaming-themed background -->
-  <section id="home" class="pt-20 bg-cover bg-center h-screen" 
-           style="background-image: url('https://source.unsplash.com/1600x900/?video-game,controller');">
-    <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-      <div class="text-center text-white px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Welcome to GameZone</h1>
-        <p class="text-xl md:text-2xl mb-6">Play the best free online games anywhere, anytime.</p>
-        <a href="https://onlinegames24x7.online"
-           class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-lg font-bold flash text-2xl md:text-4xl tracking-wide shadow-xl">
-          Explore Games
-        </a>
+  <!-- Hero Section -->
+  <section id="home" class="bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('https://source.unsplash.com/random/1600x900/?gaming')">
+    <div class="text-center">
+      <h2 class="text-5xl font-extrabold mb-4">Welcome to GameZone</h2>
+      <p class="text-xl mb-6">Discover the best games and dive into epic adventures!</p>
+      <a href="#games" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Explore Games</a>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section id="games" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Featured Games</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Game Card 1 -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <img src="https://source.unsplash.com/random/400x300/?game" alt="Game 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Space Odyssey</h3>
+            <p class="text-gray-400 mb-4">Embark on a thrilling space adventure with stunning visuals and epic battles.</p>
+            <a href="#" class="text-blue-400 hover:underline">Play Now</a>
+          </div>
+        </div>
+        <!-- Game Card 2 -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <img src="https://source.unsplash.com/random/400x300/?arcade" alt="Game 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Retro Arcade</h3>
+            <p class="text-gray-400 mb-4">Relive the classic arcade experience with modern twists and challenges.</p>
+            <a href="#" class="text-blue-400 hover:underline">Play Now</a>
+          </div>
+        </div>
+        <!-- Game Card 3 -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <img src="https://source.unsplash.com/random/400x300/?rpg" alt="Game 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Fantasy Quest</h3>
+            <p class="text-gray-400 mb-4">Explore a magical world filled with mythical creatures and epic quests.</p>
+            <a href="#" class="text-blue-400 hover:underline">Play Now</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Mobile menu toggle script -->
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const menu  = document.getElementById('mobile-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+  <!-- About Section -->
+  <section id="about" class="bg-gray-800 py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">About GameZone</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">GameZone is your one-stop destination for discovering and playing the latest and greatest games. Whether you're into action, adventure, or arcade, we have something for everyone.</p>
+    </div>
+  </section>
 
-    // Redirect on any click anywhere on the page
-    document.addEventListener('click', () => {
-      window.location.href = 'https://onlinegames24x7.online';
+  <!-- Contact Section -->
+  <section id="contact" class="py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+      <p class="text-lg text-gray-300 mb-6">Have questions or suggestions? Reach out to us!</p>
+      <div class="max-w-md mx-auto">
+        <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white">
+        <textarea placeholder="Your Message" class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white" rows="4"></textarea>
+        <button class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 GameZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
-  <!-- Default Statcounter code for social security
-https://quizonline.pages.dev/ -->
-<script type="text/javascript">
-var sc_project=13151168; 
-var sc_invisible=1; 
-var sc_security="aa8565b7"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics
-Made Easy - Statcounter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13151168/0/aa8565b7/1/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCBLXTQNVQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VCBLXTQNVQ');
-</script>
-
 </body>
 </html>
