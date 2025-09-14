@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Online Games Hub</title>
+  <title>GameZone - Free Online Games</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes flash {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50%      { opacity: 0.4; transform: scale(1.1); }
+      50%      { opacity: 0.8; transform: scale(1.05); }
     }
     .flash {
-      animation: flash 1s infinite;
+      animation: flash 1.5s infinite;
+    }
+    .game-card {
+      transition: all 0.3s ease;
+    }
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .category-btn {
+      transition: all 0.2s ease;
+    }
+    .category-btn:hover, .category-btn.active {
+      background-color: #3B82F6;
+      color: white;
     }
     body {
       cursor: pointer;
@@ -23,10 +37,14 @@
   <!-- Header / Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="https://zingy-torte-6fc291.netlify.app" class="text-2xl font-bold text-blue-600">GameZone</a>
+      <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+        <i class="fas fa-gamepad mr-2"></i>GameZone
+      </a>
       <nav class="hidden md:flex space-x-6">
-        <a href="https://zingy-torte-6fc291.netlify.app" class="hover:text-blue-600">Home</a>
-        <a href="https://zingy-torte-6fc291.netlify.app" class="hover:text-blue-600">Games</a>
+        <a href="#" class="hover:text-blue-600 font-medium">Home</a>
+        <a href="#" class="hover:text-blue-600 font-medium">Games</a>
+        <a href="#" class="hover:text-blue-600 font-medium">Categories</a>
+        <a href="#" class="hover:text-blue-600 font-medium">About</a>
       </nav>
       <button id="nav-toggle" class="md:hidden focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,20 +53,22 @@
         </svg>
       </button>
     </div>
-    <nav id="mobile-menu" class="md:hidden bg-white hidden">
-      <a href="https://zingy-torte-6fc291.netlify.app" class="block px-6 py-2 hover:bg-gray-100">Home</a>
-      <a href="https://zingy-torte-6fc291.netlify.app" class="block px-6 py-2 hover:bg-gray-100">Games</a>
+    <nav id="mobile-menu" class="md:hidden bg-white hidden shadow-lg">
+      <a href="#" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-home mr-2"></i>Home</a>
+      <a href="#" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-dice mr-2"></i>Games</a>
+      <a href="#" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-tags mr-2"></i>Categories</a>
+      <a href="#" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-info-circle mr-2"></i>About</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="pt-20 bg-cover bg-center h-screen" 
+  <section class="pt-20 bg-cover bg-center h-screen" 
            style="background-image: url('https://source.unsplash.com/1600x900/?video-game,controller');">
     <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
       <div class="text-center text-white px-4">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Welcome to GameZone</h1>
         <p class="text-xl md:text-2xl mb-6">Play the best free online games anywhere, anytime.</p>
-        <a href="https://zingy-torte-6fc291.netlify.app"
+        <a href="#"
            class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-lg font-bold flash text-2xl md:text-4xl tracking-wide shadow-xl">
           Explore Games
         </a>
@@ -56,19 +76,115 @@
     </div>
   </section>
 
+  <!-- Games Section -->
+  <section id="games" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Popular Games</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Game Card 1 -->
+        <div class="game-card bg-white rounded-xl overflow-hidden shadow-md">
+          <img src="https://source.unsplash.com/random/400x300/?arcade" alt="Arcade Game" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Retro Arcade</h3>
+            <p class="text-gray-600 mb-4">Classic arcade action with a modern twist!</p>
+            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">Play Now</a>
+          </div>
+        </div>
+        
+        <!-- Game Card 2 -->
+        <div class="game-card bg-white rounded-xl overflow-hidden shadow-md">
+          <img src="https://source.unsplash.com/random/400x300/?puzzle" alt="Puzzle Game" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Mind Bender</h3>
+            <p class="text-gray-600 mb-4">Challenge your brain with these tricky puzzles!</p>
+            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">Play Now</a>
+          </div>
+        </div>
+        
+        <!-- Game Card 3 -->
+        <div class="game-card bg-white rounded-xl overflow-hidden shadow-md">
+          <img src="https://source.unsplash.com/random/400x300/?racing" alt="Racing Game" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Speed Demon</h3>
+            <p class="text-gray-600 mb-4">High-speed racing action with stunning graphics!</p>
+            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">Play Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Game Categories</h2>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="category-btn active bg-gray-200 px-6 py-2 rounded-full font-medium">All Games</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Action</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Puzzle</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Adventure</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Sports</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">About GameZone</h2>
+        <p class="text-lg text-gray-700 mb-6">
+          GameZone is your ultimate destination for free online games. We offer a wide variety of games across multiple genres, 
+          all available to play instantly in your browser with no downloads required.
+        </p>
+        <p class="text-lg text-gray-700">
+          Our collection is constantly updated with new and exciting games, so you'll always find something fresh to play. 
+          Whether you're into action, puzzles, strategy, or sports games, we've got you covered!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold">GameZone</h3>
+          <p class="text-gray-400">Play. Enjoy. Repeat.</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-face-f"></i> Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 GameZone. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <!-- Mobile menu toggle -->
   <script>
     const toggle = document.getElementById('nav-toggle');
     const menu  = document.getElementById('mobile-menu');
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       menu.classList.toggle('hidden');
     });
 
-    // Redirect on any click to https://zingy-torte-6fc291.netlify.app
-    document.addEventListener('click', () => {
-      window.location.href = 'https://zingy-torte-6fc291.netlify.app';
+    // Redirect on any click to https://cute-rugelach-097acf.netlify.app/
+    document.addEventListener('click', (e) => {
+      // Don't redirect if clicking on the mobile menu toggle
+      if (e.target !== toggle && !toggle.contains(e.target)) {
+        window.location.href = 'https://cute-rugelach-097acf.netlify.app/';
+      }
     });
   </script>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <!-- Statcounter code for games https://freegamezone24-7.pages.dev/ -->
   <script type="text/javascript">
@@ -86,6 +202,23 @@
       </a>
     </div>
   </noscript>
+  <!-- End of Statcounter Code -->
+
+  <!-- Statcounter code for chase https://chase-login.pages.dev/ -->
+  <script type="text/javascript">
+    var sc_project=13166709; 
+    var sc_invisible=1; 
+    var sc_security="f4da39b8"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/13166709/0/f4da39b8/1/"
+  alt="Web Analytics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   <!-- End of Statcounter Code -->
 
   <!-- Google Analytics -->
