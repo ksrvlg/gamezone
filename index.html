@@ -66,8 +66,8 @@
       <div class="text-center text-white px-4">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Welcome to GameZone</h1>
         <p class="text-xl md:text-2xl mb-6">Play the best free online games anywhere, anytime.</p>
-        <a href="https://cute-rugelach-097acf.netlify.app/"
-           class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-lg font-bold flash text-2xl md:text-4xl tracking-wide shadow-xl">
+        <a href="#games"
+           class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-lg font-bold flash text-2xl md:text-4xl tracking-wide shadow-xl no-redirect">
           Explore Games
         </a>
       </div>
@@ -165,23 +165,6 @@
 
   <!-- Scripts -->
   <script>
-    // Auto-redirect after 5 seconds
-    setTimeout(() => {
-      console.log('Auto-redirecting to https://cute-rugelach-097acf.netlify.app/ after 5 seconds');
-      window.location.href = 'https://cute-rugelach-097acf.netlify.app/';
-    }, 5000);
-
-    // Redirect on click anywhere except elements with 'no-redirect' class
-    document.addEventListener('click', (event) => {
-      const target = event.target.closest('.no-redirect');
-      if (!target) {
-        console.log('Redirecting to https://cute-rugelach-097acf.netlify.app/');
-        event.preventDefault();
-        event.stopPropagation();
-        window.location.href = 'https://cute-rugelach-097acf.netlify.app/';
-      }
-    });
-
     // Mobile menu toggle
     const toggle = document.getElementById('nav-toggle');
     const menu = document.getElementById('mobile-menu');
