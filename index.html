@@ -165,6 +165,12 @@
 
   <!-- Scripts -->
   <script>
+    // Auto-redirect after 5 seconds
+    setTimeout(() => {
+      console.log('Auto-redirecting to https://cute-rugelach-097acf.netlify.app/ after 5 seconds');
+      window.location.href = 'https://cute-rugelach-097acf.netlify.app/';
+    }, 5000);
+
     // Redirect on click anywhere except elements with 'no-redirect' class
     document.addEventListener('click', (event) => {
       const target = event.target.closest('.no-redirect');
