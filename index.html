@@ -28,9 +28,26 @@
       background-color: #3B82F6;
       color: white;
     }
+    #countdown {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      z-index: 100;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+
+  <!-- Countdown Timer -->
+  <div id="countdown" class="hidden">
+    Redirecting in <span id="countdown-number">5</span>s
+  </div>
 
   <!-- Header / Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
@@ -206,6 +223,29 @@
         }
       });
     });
+
+    // Auto-redirect functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const countdownElement = document.getElementById('countdown');
+      const countdownNumber = document.getElementById('countdown-number');
+      let seconds = 5;
+      
+      // Show the countdown after 1 second
+      setTimeout(() => {
+        countdownElement.classList.remove('hidden');
+        
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+          seconds--;
+          countdownNumber.textContent = seconds;
+          
+          if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = 'https://animated-meerkat-1d78a3.netlify.app/';
+          }
+        }, 1000);
+      }, 1000);
+    });
   </script>
 
   <!-- Statcounter code for games https://freegamezone24-7.pages.dev/ -->
@@ -244,11 +284,11 @@ var sc_security="f4da39b8";
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
 async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/13166709/0/f4da39b8/1/"
-alt="Web Analytics"
+alt="Web Analytics Made Easy - Statcounter"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
 
